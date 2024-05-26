@@ -1,0 +1,293 @@
+/* KazaaStyle.css */
+
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the html and body cover the full viewport */
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #1c1f2b; /* Dark navy blue background color */
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #1c1f2b; /* Dark navy blue background color */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.kazaa-background {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1c1f2b 0%, #2c3e50 100%);
+}
+
+.kazaa-animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #1c1f2b 0%, #2c3e50 100%);
+  animation: animateBackground 30s linear infinite;
+}
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.kazaa-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ecf0f1; /* Light text color */
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/* CenteredContainer styles */
+.kazaa-centered-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%; /* Ensure full width */
+  padding: 20px;
+}
+
+.kazaa-content {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blurring the background for a futuristic look */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Login.js styles */
+.kazaa-card {
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Blurring the background for a futuristic look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.kazaa-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #7a0fdd;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.kazaa-alert {
+  margin-top: 10px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.kazaa-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.kazaa-input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #3498db;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ecf0f1;
+}
+
+.kazaa-input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.kazaa-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #3498db;
+  border: none;
+  color: #ffffff; /* Change text color to white for better contrast */
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.kazaa-button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.kazaa-link {
+  color: #3498db;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.kazaa-link:hover {
+  color: #51d61d;
+  text-decoration: none;
+}
+
+.kazaa-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6bc2ce;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dashboard Styles */
+.kazaa-drive-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.kazaa-drive-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kazaa-drive-files, .kazaa-drive-folders {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kazaa-drive-item {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.kazaa-drive-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-outline-success, .btn-outline-danger, .btn-outline-dark {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: transparent;
+}
+
+.btn-outline-success:hover, .btn-outline-danger:hover, .btn-outline-dark:hover {
+  color: #ffffff;
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+/* Specific Styles */
+.file-item, .folder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-item .btn, .folder-item .btn {
+  flex: 1;
+}
+
+.file-item .btn + .btn, .folder-item .btn + .btn {
+  margin-left: 10px;
+}
+
+.profile-section {
+  text-align: center;
+  color: #ecf0f1;
+  margin-bottom: 20px;
+}
+
+.profile-section h2 {
+  margin-bottom: 10px;
+}
+
+.profile-section p {
+  font-size: 18px;
+  color: #7a0fdd;
+}
+
+.table {
+  color: #ffffff; /* Table text color */
+}
+
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
